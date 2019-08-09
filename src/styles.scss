@@ -1,0 +1,464 @@
+@import "sass/variables.scss";
+
+body {
+  background: rgba(255, 244, 87, 1);
+  background: -moz-linear-gradient(45deg, rgba(255, 244, 87, 1) 0%, rgba(255, 183, 66, 1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255, 244, 87, 1)), color-stop(100%, rgba(255, 183, 66, 1)));
+  background: -webkit-linear-gradient(45deg, rgba(255, 244, 87, 1) 0%, rgba(255, 183, 66, 1) 100%);
+  background: -o-linear-gradient(45deg, rgba(255, 244, 87, 1) 0%, rgba(255, 183, 66, 1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(255, 244, 87, 1) 0%, rgba(255, 183, 66, 1) 100%);
+  background: linear-gradient(45deg, rgba(255, 244, 87, 1) 0%, rgba(255, 183, 66, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff457', endColorstr='#ffb742', GradientType=1);
+  height: content-box;
+  color: white;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+
+  h1,
+  h2 {
+    font-size: 20px;
+    position: relative;
+    color: $primaryColor;
+  }
+}
+
+.spacing {
+  height: 15px;
+}
+
+.spacingBig {
+  height: 45px;
+}
+
+// Nawigacja u góry
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  border-bottom: 4px solid #adb5dc;
+}
+
+.nav__container__logged {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  border-bottom: 4px solid #adb5dc;
+}
+
+.nav__container a {
+  color: $colorWhite;
+  text-decoration: none;
+
+}
+
+.nav__logged__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  a{
+    color: $colorWhite;
+    text-decoration: none;
+  }
+
+}
+
+
+
+.nav__login__logout {
+  background-color: $colorButton;
+  border: 2px solid $colorBorder;
+  margin-left: 10px;
+  font-weight: bold;
+  height: 40px;
+  width: 120px;
+
+}
+
+.nav__login__myTab {
+  background-color: $colorButton;
+  border: 2px solid $colorBorder;
+  margin-right: 10px;
+  font-weight: bold;
+  height: 40px;
+  width: 120px;
+}
+
+.nav__login__main {
+  background-color: $colorButton;
+  border: 2px solid $colorBorder;
+  margin-right: 10px;
+  font-weight: bold;
+  height: 40px;
+  width: 120px;
+}
+
+.nav__login {
+  margin-right: 10px;
+  height: 40px;
+  width: 120px;
+  font-weight: bold;
+  background-color: $colorButton;
+  border: 2px solid $colorBorder;
+
+}
+
+.nav__title__holder {
+  margin-left: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+
+  text-shadow: 0 3px 0 #b2a98f, 0 14px 10px rgba(0, 0, 0, 0.15), 0 24px 2px rgba(0, 0, 0, 0.1), 0 34px 30px rgba(0, 0, 0, 0.1);
+  color: $colorWhite;
+}
+
+.nav__title__holder__logged {
+  margin-left: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+
+  text-shadow: 0 3px 0 #b2a98f, 0 14px 10px rgba(0, 0, 0, 0.15), 0 24px 2px rgba(0, 0, 0, 0.1), 0 34px 30px rgba(0, 0, 0, 0.1);
+  color: $colorWhite;
+}
+
+// Słowka na dziś
+.wordOfDay__title {
+  margin-left: 10%;
+  color: #f8f8ff;
+  text-shadow: 0 3px 0 #b2a98f, 0 14px 10px rgba(0, 0, 0, 0.15), 0 24px 2px rgba(0, 0, 0, 0.1), 0 34px 30px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+
+}
+
+
+.wordOfDay__container {
+  padding-top: 5px;
+  margin-left: 10% ;
+  width: max-content;
+  height: max-content + 10px;
+  border: 2px solid $colorBorder;
+  border-radius: 10px;
+  background-color: $colorDay;
+}
+
+.wordOfday__word {
+  text-align: center;
+  font-size: 1.5rem;
+  color: $colorButton;
+  width: auto;
+  padding: 15px 0 5px 0;
+}
+
+.wordOfDay__definition strong {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.wordOfDay__Buttons {
+  background-color: $colorButton;
+  font-weight: bold;
+  border: 2px solid $colorBorder;
+  &:focus{
+    border: blue !important;
+
+  }
+}
+
+// Search Zone
+
+.searchZone__container {
+  width: $width;
+  margin: 0 auto;
+  height: content-box;
+  background-color: $colorWhite;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.searchZone__title {
+  margin-left: 42%;
+  align-self: center;
+  color: $colorWhite;
+  padding-bottom: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+
+  text-shadow: 0 3px 0 #b2a98f, 0 14px 10px rgba(0, 0, 0, 0.15), 0 24px 2px rgba(0, 0, 0, 0.1), 0 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+.searchZone__Buttons {
+ background-color: $colorButton;
+  font-weight: bold;
+  border: 2px solid $colorBorder;
+}
+
+.searchZone__text {
+  width: 800px;
+  height: 80px;
+  font-size: 2rem;
+  border: transparent;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.searchZone__button {
+  width: 150px;
+  height: 60px;
+  margin-right: 15px;
+  font-weight: bold;
+  background-color: $colorButton;
+  border: 2px solid $colorBorder;
+}
+
+// Pons response
+
+.ponsResponse__container {
+  width: $width;
+  height: content-box;
+  margin: 0 auto;
+  background-color: $colorWhite;
+  border-radius: 10px;
+}
+
+.ponsResponse__container__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $colorFill;
+}
+
+.ponsResponse__word {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 15px;
+  color: $colorButton;
+  font-style: italic;
+  font-size: 2rem;
+
+}
+
+.ponsResponse__response {
+  display: flex;
+  align-items: center;
+  width: $width;
+  height: 80px;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-left: 25%;
+  color: black;
+}
+
+.ponsResponse__title {
+  padding: 5px 0 0 5px;
+  font-size: 1rem;
+  color: #7d7d7d;
+  text-align: center;
+}
+.ponsResponse__container__log {
+  width: $width;
+  height: content-box;
+  margin: 0 auto;
+  background-color: $colorWhite;
+  border-radius: 10px;
+}
+.ponsResponse__title__log {
+  padding: 5px 0 0 5px;
+  font-size: 1rem;
+  color: #7d7d7d;
+  text-align: center
+}
+.ponsResponse__container__inner__log{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $colorFill;
+}
+.ponsResponse__word__log{
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 15px;
+  color: $colorButton;
+  font-style: italic;
+  font-size: 2rem;
+}
+.ponsResponse__response__log {
+  display: flex;
+  align-items: center;
+  width: $width - 10%;
+  height: 80px;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-left: 25%;
+  color: black;
+}
+
+// Footers
+
+footer {
+  padding: 15px 0 15px 0;
+  margin: 0 auto;
+  background-color: $colorFooter;
+  height: auto;
+  color: black;
+}
+
+.footer__h {
+  padding-left: 5%;
+  font-size: 1rem;
+}
+
+.footer__list {
+  padding-left: 7%;
+}
+
+// Logowanie
+
+.log__panel__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  border-bottom: 4px solid #adb5dc;
+}
+.log__panel {
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: $colorWhite;
+  border: 4px solid $colorBorder;
+  width: $width /4;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.log__panel__button {
+  margin-bottom: 20px;
+  height: 50px;
+  width: 240px;
+  font-size: 1.4rem;
+  background-color: $colorButton;
+  font-weight: bold;
+  border: 2px solid $colorBorder;
+}
+
+.log__panel__login {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  height: 50px;
+
+}
+
+.log__panel__pass {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+
+}
+
+// My Tab
+
+.myTab__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: max-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+
+  text-shadow: 0 3px 0 #b2a98f, 0 14px 10px rgba(0, 0, 0, 0.15), 0 24px 2px rgba(0, 0, 0, 0.1), 0 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+// alert
+
+.alert {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: red;
+
+}
+
+// pin
+
+.pin {
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: $width;
+  background-color: $colorButton;
+  border-radius: 5px;
+  border: 2px solid $colorBorder;
+  font-weight: bold;
+  font-size: 1.5rem;
+  &:hover {
+    background-color: #0F69D9;
+  }
+  i{
+    padding-left: 120px;
+    padding-right: 120px;
+    transform: rotate(45deg);
+  }
+}// My Tab list
+
+.myTab__list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style: none;
+  margin: 0 auto;
+  width: $width;
+  background-color: $colorFill;
+  border-radius: 10px;
+}
+
+.myTab__list__item{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-right: 40px;
+  color: black;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid $colorBorder;
+  .outer {
+      margin-left: 20px;
+    strong{
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+}
